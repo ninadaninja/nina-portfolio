@@ -204,18 +204,11 @@ a {
 }
 
 .portrait-card {
-  width: min(280px, 80%);
-  aspect-ratio: 4 / 5;
-  border-radius: 48% 48% 28% 28%;
+  position: relative;
+  width: min(360px, 80%);
+  aspect-ratio: 1;
+  border-radius: 50%;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(145deg, var(--plum), #5d3b61);
-  color: #fff;
-  box-shadow: var(--shadow);
-  transform: rotate(2deg);
 }
 
 .portrait-initials {
@@ -230,7 +223,8 @@ a {
 }
 
 .portrait {
-  display: block;
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -636,8 +630,9 @@ footer {
   }
 
   .portrait-card {
-    width: min(240px, 60vw);
+    width: min(300px, 65vw);
   }
+}
 
   .project-grid {
     grid-template-columns: 1fr 1fr;
@@ -664,7 +659,7 @@ footer {
 
 @media (max-width: 680px) {
   .portrait-card {
-    width: min(200px, 55vw);
+    width: min(240px, 65vw);
   }
 
   .site-header {
